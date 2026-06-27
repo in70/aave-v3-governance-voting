@@ -1,0 +1,13 @@
+allowBuilds:
+  bufferutil: true
+  esbuild: true
+  keccak: true
+  unrs-resolver: true
+  utf-8-validate: true
+overrides:
+  ws: "8.20.1"
+  # cuer@0.0.3 (pulled in by @rainbow-me/rainbowkit for the WalletConnect QR)
+  # calls encodeQR(..., { border: 0 }). qr@0.6.0 hardened its validation to
+  # reject border <= 0, throwing "invalid border=0". Pin to the last 0.x that
+  # accepts a borderless raw grid until cuer/rainbowkit ship a compatible qr.
+  qr: "0.5.5"
