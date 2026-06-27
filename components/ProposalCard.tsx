@@ -13,7 +13,7 @@ function timeLeft(seconds: number): string {
 export function ProposalCard({ proposal }: { proposal: UIProposal }) {
   const urgent = proposal.secondsLeft > 0 && proposal.secondsLeft < 3600;
   return (
-    <Link href={`/proposal/${proposal.id}`} className="card-link">
+    <Link href={`/proposal?id=${proposal.id}`} className="card-link">
       <div className="card">
         <div className="card-head">
           <div>
