@@ -105,7 +105,9 @@ export function VotePanel({ proposalId }: { proposalId: number }) {
         <div className="alert alert-success">
           <div className="alert-body">
             Vote submitted
-            <div className="hash">{status.hash}</div>
+            <div className="hash">
+              <a href={"https://snowscan.xyz/tx" + status.hash}>{status.hash}</a>
+            </div>
           </div>
         </div>
       )}
